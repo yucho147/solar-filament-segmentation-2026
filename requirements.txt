@@ -1,0 +1,18 @@
+# 最終候補 C（第一）・A2（予備）の推論に必要な依存関係（クリーン環境 Python 3.11.13 で確認済み。解決された全体は clean_env_freeze.txt）
+# scikit-learn は C の選別器（1.8.0 で学習・保存）を読むのに必須。apply_selector.py は版が違うと止まる。A2 だけなら不要。
+torch==2.8.0
+torchvision==0.23.0
+timm==1.0.31
+numpy==2.3.2
+scipy==1.17.1
+pycocotools==2.0.11
+loguru==0.7.3
+pillow==13.0.0
+scikit-learn==1.8.0
+pyyaml==6.0.3   # 任意の学習・評価の検査（scripts/train_fold.py）用。推論自体には不要
+# ノートブックの実行（推論自体には不要）: nbclient, ipykernel, nbformat
+matplotlib==3.10.9
+huggingface-hub==2.4.0
+ipykernel==7.2.0
+nbclient==0.10.4
+nbformat==5.10.4

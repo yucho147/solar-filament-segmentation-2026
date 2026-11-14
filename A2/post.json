@@ -1,0 +1,22 @@
+{
+ "thr": 0.4,
+ "bands": {
+  "quantity": "rho",
+  "edges": []
+ },
+ "params": [
+  {
+   "min_area": 400,
+   "min_peak": 0.995
+  }
+ ],
+ "geometry": [
+  1023.0,
+  1024.0,
+  904.0
+ ],
+ "source": {
+  "origin": "ensemble_post_selection v2 (pooled inner tune, pre-registered) 暫定",
+  "note": "単独の内側モデルで選択。5本平均では最適がずれる可能性あり"
+ }
+}

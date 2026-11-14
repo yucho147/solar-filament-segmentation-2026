@@ -1,0 +1,325 @@
+{
+ "manifest_keys": [
+  "config",
+  "config_hash",
+  "env",
+  "fit",
+  "fit_ids_hash",
+  "fold",
+  "git",
+  "init_checkpoint",
+  "inner_idx",
+  "kind",
+  "nested_hash",
+  "pretrained_init",
+  "pretrained_weights",
+  "resources",
+  "split",
+  "training_summary",
+  "weights",
+  "weights_sha256"
+ ],
+ "tau_crossfit_duplicates_outer_loo": {
+  "0": {
+   "rows_per_held_out_fold": {
+    "1": 60,
+    "2": 48,
+    "3": 87,
+    "4": 65
+   },
+   "held_out_images_also_in_train_side": {
+    "1": 14,
+    "2": 36,
+    "3": 38,
+    "4": 14
+   },
+   "pool_rows": 260,
+   "pool_unique_images": 207
+  },
+  "1": {
+   "rows_per_held_out_fold": {
+    "0": 70,
+    "2": 53,
+    "3": 43,
+    "4": 71
+   },
+   "held_out_images_also_in_train_side": {
+    "0": 11,
+    "2": 17,
+    "3": 13,
+    "4": 12
+   },
+   "pool_rows": 237,
+   "pool_unique_images": 208
+  },
+  "2": {
+   "rows_per_held_out_fold": {
+    "0": 52,
+    "1": 55,
+    "3": 78,
+    "4": 69
+   },
+   "held_out_images_also_in_train_side": {
+    "0": 30,
+    "1": 11,
+    "3": 18,
+    "4": 19
+   },
+   "pool_rows": 254,
+   "pool_unique_images": 213
+  },
+  "3": {
+   "rows_per_held_out_fold": {
+    "0": 67,
+    "1": 61,
+    "2": 71,
+    "4": 53
+   },
+   "held_out_images_also_in_train_side": {
+    "0": 31,
+    "1": 22,
+    "2": 26,
+    "4": 16
+   },
+   "pool_rows": 252,
+   "pool_unique_images": 200
+  },
+  "4": {
+   "rows_per_held_out_fold": {
+    "0": 68,
+    "1": 68,
+    "2": 57,
+    "3": 59
+   },
+   "held_out_images_also_in_train_side": {
+    "0": 35,
+    "1": 29,
+    "2": 30,
+    "3": 24
+   },
+   "pool_rows": 252,
+   "pool_unique_images": 191
+  }
+ },
+ "final_selector_tau_crossfit": {
+  "per_fold": {
+   "0": {
+    "rows": 101,
+    "also_in_other_fold_train_side": 55
+   },
+   "1": {
+    "rows": 96,
+    "also_in_other_fold_train_side": 46
+   },
+   "2": {
+    "rows": 91,
+    "also_in_other_fold_train_side": 58
+   },
+   "3": {
+    "rows": 106,
+    "also_in_other_fold_train_side": 55
+   },
+   "4": {
+    "rows": 102,
+    "also_in_other_fold_train_side": 27
+   }
+  },
+  "rows": 496,
+  "unique_images": 363
+ },
+ "inner_model_fit_inter_outer_eval": {
+  "0": {
+   "eval_n": 92,
+   "inner1": 50,
+   "inner2": 38,
+   "inner3": 58,
+   "inner4": 61,
+   "own_inner": 0
+  },
+  "1": {
+   "eval_n": 114,
+   "inner0": 66,
+   "inner2": 56,
+   "inner3": 59,
+   "inner4": 59,
+   "own_inner": 0
+  },
+  "2": {
+   "eval_n": 125,
+   "inner0": 70,
+   "inner1": 74,
+   "inner3": 77,
+   "inner4": 67,
+   "own_inner": 0
+  },
+  "3": {
+   "eval_n": 108,
+   "inner0": 53,
+   "inner1": 68,
+   "inner2": 68,
+   "inner4": 51,
+   "own_inner": 0
+  },
+  "4": {
+   "eval_n": 108,
+   "inner0": 71,
+   "inner1": 58,
+   "inner2": 46,
+   "inner3": 65,
+   "own_inner": 0
+  }
+ },
+ "pool_rows_from_models_that_saw_eval_k_in_fit": {
+  "0": {
+   "inner1": {
+    "rows": 60,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 50
+   },
+   "inner2": {
+    "rows": 48,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 38
+   },
+   "inner3": {
+    "rows": 87,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 58
+   },
+   "inner4": {
+    "rows": 65,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 61
+   }
+  },
+  "1": {
+   "inner0": {
+    "rows": 70,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 66
+   },
+   "inner2": {
+    "rows": 53,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 56
+   },
+   "inner3": {
+    "rows": 43,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 59
+   },
+   "inner4": {
+    "rows": 71,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 59
+   }
+  },
+  "2": {
+   "inner0": {
+    "rows": 52,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 70
+   },
+   "inner1": {
+    "rows": 55,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 74
+   },
+   "inner3": {
+    "rows": 78,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 77
+   },
+   "inner4": {
+    "rows": 69,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 67
+   }
+  },
+  "3": {
+   "inner0": {
+    "rows": 67,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 53
+   },
+   "inner1": {
+    "rows": 61,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 68
+   },
+   "inner2": {
+    "rows": 71,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 68
+   },
+   "inner4": {
+    "rows": 53,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 51
+   }
+  },
+  "4": {
+   "inner0": {
+    "rows": 68,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 71
+   },
+   "inner1": {
+    "rows": 68,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 58
+   },
+   "inner2": {
+    "rows": 57,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 46
+   },
+   "inner3": {
+    "rows": 59,
+    "rows_whose_model_fit_has_any_eval_k": 1,
+    "n_eval_k_in_model_fit": 65
+   }
+  }
+ },
+ "inner_models_with_fit_disjoint_from_eval_k": {
+  "0": [
+   0
+  ],
+  "1": [
+   1
+  ],
+  "2": [
+   2
+  ],
+  "3": [
+   3
+  ],
+  "4": [
+   4
+  ]
+ },
+ "outer_models_with_fit_disjoint_from_eval_k": {
+  "0": [
+   0
+  ],
+  "1": [
+   1
+  ],
+  "2": [
+   2
+  ],
+  "3": [
+   3
+  ],
+  "4": [
+   4
+  ]
+ },
+ "eval_k_in_other_tune_rows": {
+  "0": 74,
+  "1": 107,
+  "2": 88,
+  "3": 109,
+  "4": 118
+ }
+}

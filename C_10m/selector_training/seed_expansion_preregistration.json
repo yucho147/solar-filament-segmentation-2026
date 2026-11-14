@@ -1,0 +1,12 @@
+{
+ "created": "2026-11-10 JST, before any GPU run",
+ "design": "seed=43, config native_dinov3_l_cos (same as cos_s43 fold0/1), folds 2,3,4, inner selection then outer refit; extra.ema {decay 0.999, extra_decays [0.995]} enabled",
+ "evaluation": "same 547 outer images, fixed post A2 (min_area 400, min_peak 0.995, thr 0.4), paired block bootstrap (27-day blocks, n_boot 5000, seed 0)",
+ "criteria": {
+  "seed_average_helps": "PQ(avg of seed42 live + seed43 live) - mean(PQ of the two singles) >= +0.004 AND positive in >=4/5 folds AND CI lower bound > 0",
+  "selector_keeps": "C - A2 >= +0.005 with CI lower bound > 0, selector trained on seed-average inner-tune probabilities; report own-inner-tune only and pooled-other-folds separately",
+  "seed_vs_run_noise": "report s43-s42 per fold beside the existing same-seed run differences (+0.0038,-0.0129,+0.0052,+0.0118,+0.0090); do not call the difference a seed effect"
+ },
+ "not_allowed": "no change of criteria after seeing outer results; no final holdout; no Kaggle submission",
+ "limits": "outer folds already referenced repeatedly; indirect information flow through other folds' inner models persists for pooled selector; the 5-model (or 10-model) average cannot be scored on unseen development images"
+}

@@ -1,0 +1,104 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{4}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[{Ahmadzadeh} et~al\mbox{.}(2024)]%
+        {ahmadzadeh2024dataset}
+\bibfield{author}{\bibinfo{person}{Azim {Ahmadzadeh}}, \bibinfo{person}{Rohan
+  {Adhyapak}}, \bibinfo{person}{Kartik {Chaurasiya}},
+  \bibinfo{person}{Laxmi~Alekhya {Nagubandi}}, \bibinfo{person}{V. {Aparna}},
+  \bibinfo{person}{Petrus~C. {Martens}}, \bibinfo{person}{Alexei {Pevtsov}},
+  \bibinfo{person}{Luca {Bertello}}, \bibinfo{person}{Alexander {Pevtsov}},
+  \bibinfo{person}{Naomi {Douglas}}, \bibinfo{person}{Samuel {McDonald}},
+  \bibinfo{person}{Apaar {Bawa}}, \bibinfo{person}{Eugene {Kang}},
+  \bibinfo{person}{Riley {Wu}}, \bibinfo{person}{Dustin~J. {Kempton}},
+  \bibinfo{person}{Aya {Abdelkarem}}, \bibinfo{person}{Patrick~M. {Copeland}},
+  {and} \bibinfo{person}{Sri~Harsha {Seelamneni}}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{A dataset of manually annotated filaments from
+  H-alpha observations}}. In \bibinfo{booktitle}{\emph{Nature Scientific Data}}
+  \emph{(\bibinfo{series}{Nature Scientific Data}, Vol.~\bibinfo{volume}{11})}.
+  \bibinfo{publisher}{Springer}, Article \bibinfo{articleno}{1031},
+  \bibinfo{numpages}{1031}~pages.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1038/s41597-024-03876-y}
+\showDOI{\tempurl}
+
+
+\bibitem[Ahmadzadeh et~al\mbox{.}(2026)]%
+        {filament-segmentation-2026}
+\bibfield{author}{\bibinfo{person}{Azim Ahmadzadeh}, \bibinfo{person}{Dustin~J.
+  Kempton}, \bibinfo{person}{Qin Li}, {and} \bibinfo{person}{Alexei~A.
+  Pevtsov}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Solar Filament Segmentation Challenge 2026}.
+\newblock
+  \bibinfo{howpublished}{\url{https://kaggle.com/competitions/filament-segmentation-2026}}.
+\newblock
+\newblock
+\shownote{Kaggle}.
+
+
+\bibitem[Kirillov et~al\mbox{.}(2019)]%
+        {kirillov2019}
+\bibfield{author}{\bibinfo{person}{Alexander Kirillov},
+  \bibinfo{person}{Kaiming He}, \bibinfo{person}{Ross Girshick},
+  \bibinfo{person}{Carsten Rother}, {and} \bibinfo{person}{Piotr Doll{\'a}r}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Panoptic Segmentation}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/CVPR.2019.00963}
+\showDOI{\tempurl}
+
+
+\bibitem[{Meta AI}(2025)]%
+        {dinov3}
+\bibfield{author}{\bibinfo{person}{{Meta AI}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{DINOv3}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/facebookresearch/dinov3}}.
+\newblock
+\newblock
+\shownote{Pretrained model and license}.
+
+
+\end{thebibliography}

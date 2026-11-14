@@ -1,0 +1,117 @@
+{
+ "note": "10 モデル候補(seed 42 の EMA0.999 5本 + seed 43 の EMA0.999 5本、確率の等重み平均)。ローカル準備のみ。未提出・未公開。weights は回収済み重みへのシンボリックリンク",
+ "seed42_members": [
+  {
+   "fold": 0,
+   "path": "weights/fold0/weights_ema_0.999.pt",
+   "sha256": "299943e46b80fb49672445c607f1e363fc211094c29b3506cb70437f9bac0f41",
+   "manifest": "weights/fold0/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "299943e46b80fb49672445c607f1e363fc211094c29b3506cb70437f9bac0f41",
+   "refit_steps": 10500,
+   "fit_images": 403,
+   "source_run": "ema_s42f0",
+   "config_hash": "1360a159ae78a617"
+  },
+  {
+   "fold": 1,
+   "path": "weights/fold1/weights_ema_0.999.pt",
+   "sha256": "488db5771b5395e032a547c1565cba9fcaca8b79894ece5d597834ff2af65f05",
+   "manifest": "weights/fold1/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "488db5771b5395e032a547c1565cba9fcaca8b79894ece5d597834ff2af65f05",
+   "refit_steps": 7500,
+   "fit_images": 379,
+   "source_run": "ema_s42f1_run2",
+   "config_hash": "1360a159ae78a617"
+  },
+  {
+   "fold": 2,
+   "path": "weights/fold2/weights_ema_0.999.pt",
+   "sha256": "5463be357df8168d95f2e4867c221fbee2a5d5943e3a9c547a6c00851ca2173b",
+   "manifest": "weights/fold2/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "5463be357df8168d95f2e4867c221fbee2a5d5943e3a9c547a6c00851ca2173b",
+   "refit_steps": 7000,
+   "fit_images": 349,
+   "source_run": "ema_s42f2",
+   "config_hash": "1360a159ae78a617"
+  },
+  {
+   "fold": 3,
+   "path": "weights/fold3/weights_ema_0.999.pt",
+   "sha256": "f19b24d399a1c136d0daac2dbe164334b8c2aca71859c0807ce7cf5597df567d",
+   "manifest": "weights/fold3/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "f19b24d399a1c136d0daac2dbe164334b8c2aca71859c0807ce7cf5597df567d",
+   "refit_steps": 7500,
+   "fit_images": 389,
+   "source_run": "ema_s42f3",
+   "config_hash": "1360a159ae78a617"
+  },
+  {
+   "fold": 4,
+   "path": "weights/fold4/weights_ema_0.999.pt",
+   "sha256": "6477b5fb69a901d60365b5633ff2f125c8ae920625ee4fb4ec0db4c4f1032243",
+   "manifest": "weights/fold4/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "6477b5fb69a901d60365b5633ff2f125c8ae920625ee4fb4ec0db4c4f1032243",
+   "refit_steps": 8500,
+   "fit_images": 395,
+   "source_run": "ema_s42f4",
+   "config_hash": "1360a159ae78a617"
+  }
+ ],
+ "seed43_members": [
+  {
+   "fold": 0,
+   "path": "s43_weights/fold0/weights_ema_0.999.pt",
+   "sha256": "ff1a1ba1ed5c3486d5b69e92e7d4cd72d4ffdca7f10aedd19359c878927cde62",
+   "manifest": "s43_weights/fold0/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "ff1a1ba1ed5c3486d5b69e92e7d4cd72d4ffdca7f10aedd19359c878927cde62",
+   "manifest_matches_weights": true,
+   "source_run": "ema_s43f0 (redo, 2026-11-10)",
+   "config_hash": "8516949512f9acc3",
+   "manifest_reconstructed": false
+  },
+  {
+   "fold": 1,
+   "path": "s43_weights/fold1/weights_ema_0.999.pt",
+   "sha256": "58929fb753f521b37fc853cbb5ce02fa355e8308b299a426550407491e663a7c",
+   "manifest": "s43_weights/fold1/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "58929fb753f521b37fc853cbb5ce02fa355e8308b299a426550407491e663a7c",
+   "manifest_matches_weights": true,
+   "source_run": "ema_s43f1 (redo, 2026-11-10)",
+   "config_hash": "8516949512f9acc3",
+   "manifest_reconstructed": false
+  },
+  {
+   "fold": 2,
+   "path": "s43_weights/fold2/weights_ema_0.999.pt",
+   "sha256": "ea4abf5e04fc8086c9e844b52461fefbdb92f780e808c63a435b4ba69b7dbf10",
+   "manifest": "s43_weights/fold2/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "ea4abf5e04fc8086c9e844b52461fefbdb92f780e808c63a435b4ba69b7dbf10",
+   "manifest_matches_weights": true,
+   "source_run": "cos_s43 fold2 (select+refit with EMA)",
+   "config_hash": "8516949512f9acc3",
+   "manifest_reconstructed": false
+  },
+  {
+   "fold": 3,
+   "path": "s43_weights/fold3/weights_ema_0.999.pt",
+   "sha256": "85d96d4ec365fae4f10dfa1142b1e3af9f4e2f7e7cdb27a7baa1e5aa86117856",
+   "manifest": "s43_weights/fold3/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "85d96d4ec365fae4f10dfa1142b1e3af9f4e2f7e7cdb27a7baa1e5aa86117856",
+   "manifest_matches_weights": true,
+   "source_run": "cos_s43 fold3 (select+refit with EMA)",
+   "config_hash": "8516949512f9acc3",
+   "manifest_reconstructed": true
+  },
+  {
+   "fold": 4,
+   "path": "s43_weights/fold4/weights_ema_0.999.pt",
+   "sha256": "60cc2a3990ef025914d72b5ed8d5ae7d263211b091f43402dbc46d231a72bc70",
+   "manifest": "s43_weights/fold4/ema_0.999/manifest.json",
+   "manifest_weights_sha256": "60cc2a3990ef025914d72b5ed8d5ae7d263211b091f43402dbc46d231a72bc70",
+   "manifest_matches_weights": true,
+   "source_run": "cos_s43 fold4 (select+refit with EMA)",
+   "config_hash": "8516949512f9acc3",
+   "manifest_reconstructed": false
+  }
+ ]
+}

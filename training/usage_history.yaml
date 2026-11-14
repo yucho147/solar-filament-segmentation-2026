@@ -1,0 +1,21 @@
+# 既存 split の使用履歴。評価結果に添付し、「未使用の独立評価」と誤って扱わないための記録。
+# 出典は aidlc-docs/operations/experiment-log.md（日付は各節の見出し）。新しい参照が増えたらここへ追記する。
+split_hash: 842cc227d1dae8dd
+outer_folds:
+  status: used_for_condition_selection
+  detail: >-
+    fold0〜4 の評価画像は、損失・教師・学習更新数・解像度（a1〜a4, b1, b2）、拡張・推論・後処理（exp019〜024）、
+    しきい値・最小面積・min_peak の選択に繰り返し使用済み。fold の PQ は条件選別後の値で、独立評価ではない。
+holdout:
+  status: referenced
+  evaluations:
+    - {run: exp001, date: 2026-10-31, holdout_pq: 0.3086, note: "108画像を採点（探索前の初期モデル）"}
+    - {run: a1_bce_dice 5fold ensemble, date: 2026-10-31, holdout_pq: 0.3973, note: "108画像を採点"}
+  detail: >-
+    最終 holdout（108画像）は2回採点済みで、結果を見て次の実験を決めた。以後 holdout を条件選択に使わない。
+    新しい比較では holdout を採点せず、採点する場合も「参照履歴あり」と明記する。
+kaggle_public:
+  - {ref: 57855844, date: 2026-11-01, public_score: 0.35, note: "e19_legacy_s42 5fold d4 TTA min_peak0.8。公開側は別画像・別集計"}
+native_resolution_dinov3:
+  - {date: 2026-11-03, folds: [0, 1], note: "原寸512切片のn1(DINOv3-L)とn0(EfficientNetV2-S)の入れ子評価。外側fold0・1を再度使用。最終holdoutは不使用"}
+  - {date: 2026-11-03, folds: [2, 3, 4], note: "原寸512切片のn1/n0を外側fold2〜4でも評価（再現確認）。以後fold0〜4すべてがこの比較に使用済み。最終holdoutは不使用"}

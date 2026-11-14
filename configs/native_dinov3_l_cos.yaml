@@ -1,0 +1,37 @@
+# 【新しい基準】原寸2048・512切片・DINOv3 ViT-L/16＋高解像度decoder。学習率scheduler=線形warmup→cosine減衰（ユーザー確定事項。比較実験ではなく基準の切替）。
+arch: dinov3_seg
+encoder: large            # timm/vit_large_patch16_dinov3.lvd1689m（revision 30c11095…、sha256 45172f20…）
+pretrained: true
+factor: 1                 # 入力画像・教師は縮小しない
+crop: 512
+batch: 8
+steps: 12000              # 予定する最大更新数（cosineの長さも同じ。収束していなかったため2倍。初期値であり根拠は未検証）
+lr_schedule_steps: 0
+pct_start: 0.05           # warmup 600更新
+lr_scheduler: cosine      # 線形warmup→cosine→最小学習率(min_lr_ratio)
+min_lr_ratio: 0.01
+wd: 0.0001
+lr_opts: {encoder_lr: 0.00006, decoder_lr: 0.0003, layer_decay: 0.9}   # encoder最大lrを3e-5→6e-5（浅い層は層別減衰で約1/10）。初期値であり根拠は未検証
+model_opts: {freeze_blocks: 0, grad_ckpt: false}
+aug: legacy               # 90度回転・反転 + 画像のみの弱い明度/コントラスト
+sampling: {fg: 0.75, disc: 0.0, bg: 0.15, min_disc: 0.5}   # 基準切片以外: 前景0.75 / 円盤内の背景0.15 / 一様0.10（実測: 背景のみの切片13%）
+native: {same_image_crops: 3, overlap: [0.25, 0.75], min_fg_px: 64}   # 1バッチ8切片 = 同一画像3（基準1+近傍2、重なり25〜75%、前景64画素以上を優先）+ 他画像5
+loss: bce_dice
+target_mode: mean
+tta: true
+tta_set: flip
+infer: {mode: tile, tile: 512, overlap: 0.5, weight: uniform}   # stride 256 / 49窓
+amp: true
+seed: 42
+early_stopping:
+  enabled: true
+  eval_every: 500
+  start_step: 500         # 検証を始める更新数
+  selection_start: 4000   # 最良値の選択対象にする最初の更新数（warmup 600更新とcosine前半を越える）
+  min_steps: 6000         # 停止を許す最低更新数（cosineは後半で損失が下がるため、全期間の半分以降）
+  patience: 4
+  min_delta: 0.001
+  history_every: 50
+  train_subset: 48        # 内側fitの固定画像（同じ評価手順）
+  val_max: 0              # 内側tuneは全画像
+  eval_tiles: {tile: 512, overlap: 0.0, batch: 8, tta: false}   # 16窓・TTAなし。train/validationで共通

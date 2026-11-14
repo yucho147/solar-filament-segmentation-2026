@@ -1,0 +1,9 @@
+# The ten weight files (*.pt) ARE part of the Hugging Face repository (Git LFS). For the GitHub copy (code only), delete the weights/ and s43_weights/ *.pt files or add "*.pt" here.
+*.npy
+*.npz
+out_*/
+data/
+outputs/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

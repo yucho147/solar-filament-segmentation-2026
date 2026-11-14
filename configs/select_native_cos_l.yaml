@@ -1,0 +1,7 @@
+# 内側選択（新しい基準 cosine・DINOv3-L）: 1候補、更新数は early stopping が選ぶ。後処理は内側tuneだけで選ぶ。
+candidates:
+  - {name: early12000, overrides: {steps: 12000}}
+post_grid:
+  thr: [0.4, 0.5, 0.6, 0.7, 0.8]
+  min_area: [200, 400, 800]
+  min_peak: [0.0, 0.7, 0.8, 0.9]
